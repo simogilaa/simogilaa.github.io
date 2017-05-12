@@ -110,6 +110,11 @@ img:hover {
     cursor: default;
     opacity: 1;
     position: relative;
+    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.5s;
 }
 
 /* no scroll on modal screen */
@@ -121,6 +126,11 @@ img:hover {
 /* remove scrollbar */
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
 }
 
 /*Smartphone mode*/
