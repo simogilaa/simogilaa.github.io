@@ -110,11 +110,11 @@ img:hover {
     cursor: default;
     opacity: 1;
     position: relative;
-    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
+
     animation-name: zoom;
-    animation-duration: 0.5s;
+    animation-duration: 0.5s;    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.5s;
 }
 
 /* no scroll on modal screen */
@@ -128,10 +128,14 @@ img:hover {
     width: 0px;
 }
 
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)} 
     to {-webkit-transform:scale(1)}
-}
+} 
 
 /*Smartphone mode*/
 @media only screen and (max-width: 991px) {
