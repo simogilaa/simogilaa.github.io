@@ -1,0 +1,22 @@
+.sabelt-background {
+    background-image: url('./images/wall-2560x1440.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-opacity-09 {
+    opacity:0.9
+}
+
+.driver {
+    cursor: pointer !important;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /* Aggiungi altri stili desiderati */
+}
