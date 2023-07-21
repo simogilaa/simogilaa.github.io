@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simogilaa's Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+</head>
+
+<body>
+<div id="container" class="row myContainer">
+
+<!-- Menu -->
+    <div id="sidebar" class="col-md-3 sidenav sidebar">
+        <div>
+            <h1><b>HELLO WORLD</b></h1>
+        </div>
+      <ul id="btngroup" class="nav nav-stacked btnGroup">
+        <li><a href="#aboutMe" onclick="openAboutMe()"><h4>&#128240; <u>About me</u></h4></a></li>
+        <li><a href="#photoGrid" onclick="openPictures()"><h4>&#127748; <u>Pictures</u></h4></a></li>
+        <li><a href="#musicPage" onclick="openMusic()"><h4>&#127926; <u>Music</u></h4></a></li>
+      </ul><br>
+    </div>
+    
+<!-- Photo Grid Page -->    
+    <div id="photoGrid" class="col-md-9 photoGrid">
+        <div id="gridrow" class="row gridRow">
+            <div id="gridcol" class="col-md-4 gridCol">
+                <img src="immagini/wade.jpg" class="img-rounded" onclick="onClick(this)"/>
+            </div>
+            <div id="gridcol" class="col-md-4 gridCol">
+                <img src="immagini/787b.jpg" class="img-rounded" onclick="onClick(this)"/>
+            </div>
+            <div id="gridcol" class="col-md-4 gridCol">
+                <img src="immagini/greenday.jpg" class="img-rounded" onclick="onClick(this)"/>
+            </div>
+        </div>
+        <div id="gridrow" class="row gridRow">
+            <div id="gridcol" class="col-md-4 gridCol">
+                <img src="immagini/rossi.jpg" class="img-rounded" onclick="onClick(this)"/>
+            </div>
+            <div id="gridcol" class="col-md-4 gridCol">
+                <img src="immagini/f12002.jpg" class="img-rounded" onclick="onClick(this)"/>
+            </div>
+            <div id="gridcol" class="col-md-4 gridCol">
+                <img src="immagini/plane.jpg" class="img-rounded" onclick="onClick(this)"/>
+            </div>
+        </div>    
+    </div>
+
+<!-- Music Page -->    
+    <div id="musicPage" class="col-md-9 musicPage">
+        <div class="row">
+            <h2>Musica:</h2>
+                <h4>- Si</h4>
+                <h4>- Molti</h4>
+                <h4>- Tantissimi</h4>
+        </div>
+    </div>
+    
+<!-- About Me Page -->
+    <div id="aboutMe" class="col-md-9 aboutMe">
+        <div class="row">
+            <h2>Interessi:</h2>
+                <h4>- Si</h4>
+                <h4>- Molti</h4>
+                <h4>- Tantissimi</h4>
+            <br><h2>Sport:</h2>
+                <h4>- Si</h4>
+                <h4>- Molti</h4>
+                <h4>- Tantissimi</h4>
+            <br><h2>Hobby:</h2>
+                <h4>- Si</h4>
+                <h4>- Molti</h4>
+                <h4>- Tantissimi</h4>
+        </div>
+    </div>
+    
+<!-- Modal -->
+    <div id="myModal" class="modal myModal" onclick="this.style.display='none'">
+        <img id="imgModal"/>
+    </div>
+  
+</div>
+
+<!-- Footer -->
+<div id="footer" class="myFooter">
+    <h3>Simone Gilardi &copy;</h3>
+</div>
+
+<!-- Scripts -->
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("imgModal").src = element.src;
+  document.getElementById("myModal").style.display = "flex";
+  var screenTop = $(document).scrollTop();
+  $("#myModal").css("top", screenTop);
+}
+
+// Open Photo page
+function openPictures() {
+    document.getElementById("photoGrid").style.display = "block";
+    document.getElementById("musicPage").style.display = "none";
+    document.getElementById("aboutMe").style.display = "none";
+}
+
+// Open Music page
+function openMusic() {
+    document.getElementById("photoGrid").style.display = "none";
+    document.getElementById("musicPage").style.display = "block";
+    document.getElementById("aboutMe").style.display = "none";
+}
+
+// Open About Me page
+function openAboutMe() {
+    document.getElementById("photoGrid").style.display = "none";
+    document.getElementById("musicPage").style.display = "none";
+    document.getElementById("aboutMe").style.display = "block";
+}
+
+// Disable scroll on modal open
+$(document).on("click", ".img-rounded", function(){
+    $("BODY, HTML").addClass("doNotScroll");
+})
+// Activate scroll on modal close
+$(document).on("click", "#myModal", function(){
+    $("BODY, HTML").removeClass("doNotScroll");
+})
+
+</script>
+
+</body>
+</html>

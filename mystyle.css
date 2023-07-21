@@ -1,0 +1,177 @@
+html, body {
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:#0B486B;
+}
+
+.myContainer {
+    margin: 0;
+    padding: 0 3% 0 3%;
+    width: 100%; 
+    height: 100%;  
+    background-color: #E0E4CC;
+}
+
+.myFooter {
+    text-align: center;
+    padding: 9px;
+    width: 100%;
+    height: 80px;
+    background-color: #E0E4CC;
+}
+
+.sidebar {
+    padding-top: 4%;
+    height: 100%;
+    background-color: #69D2E7;
+    text-align: center;
+}
+
+.btnGroup {
+    padding-top: 30%;
+}
+
+.photoGrid {
+    display: none;
+    padding: 0 2% 2% 2%;
+    height: 100%;
+    background-color: #A7DBD8;
+}
+
+.musicPage {
+    display: none;
+    padding: 4% 5% 5% 5%;
+    height: 100%;
+    background-color: #A7DBD8;
+}
+
+.aboutMe {
+    padding: 4% 5% 5% 5%;
+    height: 100%;
+    background-color: #A7DBD8;
+}
+
+.gridRow {
+    padding: 3% 0 0 0;
+    height: 50%;
+}
+
+.gridCol {
+    height: 100%;
+    position: relative;
+}
+
+img {
+    box-shadow: 0px 0px 20px #000000;
+    opacity: 1;
+    cursor: pointer;
+    max-width: 92%;
+    max-height: 92%;
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+
+img:hover {
+    opacity: 0.8;
+}
+
+.myModal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+#imgModal {
+    box-shadow: 0px 0px 50px #000000;
+    border: solid 1px #ffffff;
+    border-radius: 10px;
+    max-width: 95%;
+    max-height: 95%;
+    cursor: default;
+    opacity: 1;
+    position: relative;
+
+    animation-name: zoom;
+    animation-duration: 0.5s;    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.5s;
+}
+
+/* no scroll on modal screen */
+.doNotScroll {
+   overflow: hidden;
+   display: inline;
+}
+
+/* remove scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+} 
+
+/*Smartphone mode*/
+@media only screen and (max-width: 991px) {
+
+    .myContainer {
+        height: auto;
+    }
+    
+    .photoGrid {
+        padding: 2% 2% 2% 2%;
+        text-align: center;
+        height: auto;
+        width: 100%;
+    }
+    
+    .gridRow {
+        padding: 0 3% 0 3%;
+    }
+    
+    .gridCol {
+        height: 300px;
+    }
+    
+    .musicPage {
+        text-align: center;
+        height: auto;
+    }
+    
+    .aboutMe {
+        text-align: center;
+        height: auto;
+    }
+    
+    .myFooter h3 {
+        padding: 4px;
+        font-size: 16px;
+    }
+  
+}
